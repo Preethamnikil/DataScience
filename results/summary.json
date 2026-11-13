@@ -1,0 +1,113 @@
+{
+  "dataset": "2019 Indian General Election tweets (Twitter_Data.csv)",
+  "topic": "Public opinion on Indian politics during Lok Sabha 2019",
+  "n_labeled_after_cleaning": 159541,
+  "train_size": 127632,
+  "test_size": 31909,
+  "split": "80/20 stratified",
+  "label_counts": {
+    "positive": 71697,
+    "neutral": 52449,
+    "negative": 35395
+  },
+  "leader_counts_labeled": {
+    "Modi": 129227,
+    "Other": 23663,
+    "Rahul": 6651
+  },
+  "leader_raw_counts": {
+    "Modi": 25534,
+    "Rahul": 14159
+  },
+  "leader_sentiment": {
+    "negative": {
+      "Modi": 0.1864,
+      "Rahul": 0.2097
+    },
+    "neutral": {
+      "Modi": 0.355,
+      "Rahul": 0.3852
+    },
+    "positive": {
+      "Modi": 0.4586,
+      "Rahul": 0.4051
+    }
+  },
+  "metrics": [
+    {
+      "model": "Naive Bayes",
+      "accuracy": 0.7189,
+      "precision": 0.7446,
+      "recall": 0.7189,
+      "f1": 0.7086,
+      "train_seconds": 0.3
+    },
+    {
+      "model": "SVM",
+      "accuracy": 0.8816,
+      "precision": 0.8843,
+      "recall": 0.8816,
+      "f1": 0.8813,
+      "train_seconds": 7.7
+    },
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.8694,
+      "precision": 0.8746,
+      "recall": 0.8694,
+      "f1": 0.8695,
+      "train_seconds": 5.5
+    },
+    {
+      "model": "LSTM",
+      "accuracy": 0.8062,
+      "precision": 0.8118,
+      "recall": 0.8062,
+      "f1": 0.8075,
+      "train_seconds": 32.7
+    },
+    {
+      "model": "BERT-style Transformer",
+      "accuracy": 0.8028,
+      "precision": 0.8013,
+      "recall": 0.8028,
+      "f1": 0.8011,
+      "train_seconds": 64.3
+    }
+  ],
+  "best_ml_model": "SVM",
+  "best_overall_model": "SVM",
+  "best_overall_f1": 0.8813,
+  "example_predictions": [
+    {
+      "tweet": "Modi government is doing a great job for development and national security.",
+      "clean_text": "modi government great job development national security",
+      "predicted_sentiment": "positive"
+    },
+    {
+      "tweet": "Rahul Gandhi has no vision and this campaign is a complete disaster.",
+      "clean_text": "rahul gandhi no vision campaign complete disaster",
+      "predicted_sentiment": "positive"
+    },
+    {
+      "tweet": "Voting will take place on 23rd May across polling booths in India.",
+      "clean_text": "voting take place may across polling booth india",
+      "predicted_sentiment": "neutral"
+    },
+    {
+      "tweet": "Chowkidar chor hai, people are tired of empty promises and unemployment.",
+      "clean_text": "chowkidar chor hai people tired empty promise unemployment",
+      "predicted_sentiment": "negative"
+    },
+    {
+      "tweet": "Proud of our democracy, both parties should debate jobs and agriculture calmly.",
+      "clean_text": "proud democracy party debate job agriculture calmly",
+      "predicted_sentiment": "positive"
+    }
+  ],
+  "timing_seconds": {
+    "load": 1.8,
+    "preprocess": 7.4,
+    "ml": 25.9
+  }
+}
